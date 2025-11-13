@@ -5,10 +5,13 @@ import { templateRoutes } from './routes/templateRoutes.js';
 
 const app = express();
 
+// Parse JSON request bodies
+app.use(express.json());
+
 const PORT = 3000;
 
 (async () => {
-  await process.loadEnvFiles('.env');
+  process.loadEnvFile?.('.env');
 })();
 
 const mongodb_url = process.env.MONGODB_URL || '';

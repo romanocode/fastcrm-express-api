@@ -11,4 +11,4 @@ const templateSchema = new Schema({
   
 });
 
-export const Templates = mongoose.model('Template', templateSchema);
+export const Templates = mongoose.model('Templates', templateSchema);
